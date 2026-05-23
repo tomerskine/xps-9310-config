@@ -1,0 +1,20 @@
+# Prevent accidental commit of unencrypted sensitive files.
+# Encrypted files (.age suffix) are fine to commit.
+
+# Raw private keys (add via chezmoi with encryption instead)
+private_dot_ssh/private_*
+!private_dot_ssh/private_*.age
+
+# Unencrypted env files
+dot_env
+private_dot_env
+dot_env.*
+private_dot_env.*
+!*.age
+
+# Raw key material
+*.key
+*.pem
+*.p12
+*.pfx
+!*.age

@@ -1,0 +1,15 @@
+# Files chezmoi should not manage (patterns match target paths relative to ~)
+
+# SSH known_hosts is machine-specific
+.ssh/known_hosts
+
+# Browser data
+.mozilla/
+.config/google-chrome/
+.config/chromium/
+.config/BraveSoftware/
+
+# Caches and runtime state
+.cache/
+.local/share/recently-used.xbel
+.local/share/gvfs-metadata/

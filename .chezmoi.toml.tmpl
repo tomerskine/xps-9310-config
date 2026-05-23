@@ -1,0 +1,13 @@
+{{- $ageFields := onepasswordDetailsFields "chezmoi age key" -}}
+encryption = "age"
+
+[age]
+    identity = "~/.age/key.txt"
+    recipient = "{{ $ageFields.public_key.value }}"
+
+[onepassword]
+    command = "op"
+
+[git]
+    autoCommit = false
+    autoPush = false
