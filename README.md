@@ -48,7 +48,7 @@ sudo pacman -S chezmoi age
 ## Secrets
 
 - **1Password templates**: reference secrets in dotfile templates with e.g.
-  `{{ (onepasswordDetailsFields "my item").field_name.value }}`
+  `{{ (onepasswordItemFields "my item" "Private").field_name.value }}`
 - **Encrypted files**: run `chezmoi add --encrypt <file>` — chezmoi encrypts with age before
   committing, decrypts on apply. The age key lives in 1Password (see above).
 - **Never commit**: raw private keys, `.env` files, or any plaintext credentials.
