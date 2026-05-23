@@ -1,0 +1,19 @@
+#
+# ~/.bashrc
+#
+
+# If not running interactively, don't do anything
+[[ $- != *i* ]] && return
+
+alias ls='ls --color=auto'
+alias grep='grep --color=auto'
+PS1='[\u@\h \W]\$ '
+
+# Created by `pipx` on 2026-05-17 22:13:58
+export PATH="$PATH:/home/tom/.local/bin"
+
+# uv
+export PATH="/home/tom/.local/bin:$PATH"
+
+# starship
+eval "$(starship init bash)"
